@@ -1,0 +1,78 @@
+.container {
+    margin-left: 600px;
+    width: 500px;
+    height: 600px;
+    border-radius: 6px;
+    margin-top: 20px;
+
+}
+
+h2 {
+    margin-left: 180px;
+    color: cornflowerblue;
+}
+
+.inputText {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    width: 380px;
+    height: 30px;
+    margin: 10px;
+}
+
+button {
+    background-color: cadetblue;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.listItem {
+    background: #cccccc;
+    width: 450px;
+    margin: 20px auto;
+    border-radius: 4px;
+    position: relative;
+    padding: 10px;
+}
+
+.iconDelete {
+    color: snow;
+    width: 90px;
+    position: absolute;
+    right: 10px;
+}
+
+.iconDelete:hover {
+    color: darkred;
+}
+
+.iconCheck {
+    position: absolute;
+    right: 30px;
+    color: snow;
+    width: 90px;
+}
+
+.iconCheck:hover {
+    color: darkgreen;
+}
+
+.footer {
+    margin-left: 40px;
+}
+
+.footer button {
+    margin: 5px;
+}
+
+.AllButton {
+    margin-left: 30px !important;
+}
+
+.RemoveButton {
+    margin-left: 130px !important;
+}
