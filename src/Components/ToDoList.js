@@ -14,8 +14,8 @@ import Buttons from "./Buttons";
 function ToDoList() {
 
     const dispatch = useDispatch();
-    const items = useSelector(state => state.items)
-    const filter=useSelector(state=>state.filter)
+    const {items} = useSelector(state => state)
+    const {filter}=useSelector(state=>state)
 
     const deleteItems = (items) => {
         dispatch(deleteAllItemsAction(items))
@@ -30,9 +30,8 @@ function ToDoList() {
         const list = items.map(item => {
             if (item.id === id) {
                 return {...item, complete: !item.complete};
-            } else {
-                return item
             }
+            return item
         })
         dispatch(completedItemAction(list))
 
@@ -41,15 +40,16 @@ function ToDoList() {
     const removeAllCompleted = (id) => {
         dispatch(removeCompletedAction(id))
     }
+    const item = items.filter((el) => filter === 'all' ? true : filter === 'active' ? !el.complete : el.complete)
 
-    let item = [];
-    if (filter === 'all') {
-        item = items
-    } else if (filter === 'active') {
-        item = items.filter(item => !item.complete)
-    } else if (filter === 'complete') {
-        item = items.filter(item => item.complete);
-    }
+    // let item = [];
+    // if (filter === 'all') {
+    //     item = items
+    // } else if (filter === 'active') {
+    //     item = items.filter(item => !item.complete)
+    // } else if (filter === 'complete') {
+    //     item = items.filter(item => item.complete);
+    // }
 
     return (
         <div  className={s.container}>
